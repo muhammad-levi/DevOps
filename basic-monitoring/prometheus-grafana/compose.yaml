@@ -3,13 +3,15 @@ services:
     image: prom/prometheus
     container_name: prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
+      - "--config.file=/etc/prometheus/prometheus.yml"
     ports:
       - 9090:9090
     restart: unless-stopped
     volumes:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
+    networks:
+      - dockerized-nest
   grafana:
     image: grafana/grafana
     container_name: grafana
@@ -23,3 +25,7 @@ services:
       - ./grafana:/etc/grafana/provisioning/datasources
 volumes:
   prom_data:
+
+networks:
+  dockerized-nest:
+    external: true

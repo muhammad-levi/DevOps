@@ -4,6 +4,10 @@
 - [Node](https://nodejs.org/en/download) v20.13.1 installed
   - Preferably installed via [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm)
 - Git submodule [`/dockerize-nest/nest`](./nest) initiated
+- A new external docker network, use this command:
+  ```bash
+  docker network create dockerized-test
+  ```
 
 ### Build the Docker image and run it locally
 
