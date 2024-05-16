@@ -36,6 +36,8 @@ RUN --mount=type=bind,source=${SAMPLE_DIR_PATH}package.json,target=package.json 
 # Create a stage for building the application.
 FROM deps as build
 
+ARG SAMPLE_DIR_PATH
+
 # Download additional development dependencies before building, as some projects require
 # "devDependencies" to be installed to build. If you don't need this, remove this step.
 RUN --mount=type=bind,source=${SAMPLE_DIR_PATH}package.json,target=package.json \
