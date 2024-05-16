@@ -1,0 +1,3 @@
+[submodule "dockerize-nest/nest"]
+	path = dockerize-nest/nest
+	url = https://github.com/nestjs/nest.git
