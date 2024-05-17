@@ -20,6 +20,7 @@
 7. Visit http://localhost:3000 to access Grafana (data visualization / dashboards), login with user: `admin`, password: `grafana`
 8. In Grafana Dashboards, can import using the ID `11159`, or see [this page](https://grafana.com/grafana/dashboards/11159-nodejs-application-dashboard/) for more details.
 9. Use the default Prometheus as the data source.
+10. Setup alert with Grafana, see [this video](https://www.youtube.com/watch?v=6W8Nu4b_PXM) for help.
 
 ![Grafana common NodeJS dashboard](assets/grafana-common-nodejs-dashboard.png)
 
