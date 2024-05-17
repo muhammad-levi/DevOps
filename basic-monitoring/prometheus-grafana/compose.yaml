@@ -22,11 +22,15 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=grafana
     volumes:
-      - ./grafana:/etc/grafana/provisioning/datasources
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/import/dashboards:/var/lib/grafana/dashboards
+      - grafana_data:/var/lib/grafana
     networks:
       - dockerized-nest
 volumes:
   prom_data:
+  grafana_data:
 
 networks:
   dockerized-nest:

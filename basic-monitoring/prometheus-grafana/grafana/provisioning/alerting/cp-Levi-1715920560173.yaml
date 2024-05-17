@@ -1,0 +1,11 @@
+apiVersion: 1
+contactPoints:
+    - orgId: 1
+      name: Levi
+      receivers:
+        - uid: cdly493g9jshte
+          type: email
+          settings:
+            addresses: iskypa@gmail.com
+            singleEmail: false
+          disableResolveMessage: false
